@@ -1,0 +1,19 @@
+.teacher-container {
+  display: flex;
+}
+
+.teacher-content {
+  margin-left: 220px;
+  padding: 20px;
+  width: calc(100% - 220px);
+}
+
+@media (max-width: 768px) {
+  .teacher-container {
+    flex-direction: column;
+  }
+  .teacher-content {
+    margin-left: 0;
+    width: 100%;
+  }
+}

@@ -1,0 +1,22 @@
+.admin-wrapper {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  overflow: hidden;
+}
+.admin-body {
+  display: flex;
+  flex: 1;
+  overflow: hidden;
+  position: relative;
+}
+.admin-content {
+  flex: 1;
+  overflow-y: auto;
+  padding: 28px;
+  background: linear-gradient(135deg, #f8fafc, #eef2ff);
+}
+
+@media (max-width: 768px) {
+  .admin-content { padding: 16px; }
+}

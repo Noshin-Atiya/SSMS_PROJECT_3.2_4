@@ -1,0 +1,245 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.cover-container {
+  width: 100%;
+  min-height: 100vh;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  overflow: hidden;
+  font-family: "Inter", sans-serif;
+}
+
+/* =========================
+   Background
+========================= */
+
+.cover-bg {
+  position: absolute;
+  inset: 0;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.cover-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    90deg,
+    rgba(7, 20, 58, 0.92) 0%,
+    rgba(7, 20, 58, 0.75) 35%,
+    rgba(7, 20, 58, 0.45) 60%,
+    rgba(7, 20, 58, 0.15) 100%
+  );
+}
+
+/* =========================
+   Content
+========================= */
+.cover-logo {
+  font-size: 70px;
+  margin-bottom: 12px;
+}
+
+.cover-content {
+  position: relative;
+  z-index: 5;
+  max-width: 1000px;
+  padding-left: 80px;
+  color: white;
+}
+
+.cover-title {
+  font-size: clamp(1rem, 3vw, 3rem);
+  font-weight: 800;
+  line-height: 1.1;
+  margin-bottom: 12px;
+  white-space: nowrap; /* এক লাইনে রাখবে */
+}
+
+.cover-subtitle {
+  color: #93c5fd;
+  font-size: 0.95rem;
+  line-height: 1.5;
+  margin-bottom: 12px;
+}
+
+.cover-divider {
+  width: 60px;
+  height: 3px;
+  background: linear-gradient(90deg, #2563eb, #38bdf8);
+  border-radius: 50px;
+  margin-bottom: 20px;
+}
+
+.cover-desc {
+  color: #cbd5e1;
+  font-size: 0.95rem;
+  line-height: 1.7;
+  max-width: 850px;
+  margin-bottom: 24px;
+}
+
+/* =========================
+   Feature Cards
+========================= */
+
+.feature-cards {
+  display: flex;
+  gap: 30px;
+  margin-bottom: 25px;
+  flex-wrap: nowrap;
+}
+
+.feature-card {
+  width: 95px;
+  height: 95px;
+
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  backdrop-filter: blur(10px);
+
+  border-radius: 12px;
+
+  padding: 8px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+
+  transition: all 0.3s ease;
+}
+
+.feature-card:hover {
+  transform: translateY(-4px);
+}
+
+.feature-icon {
+  width: 32px;
+  height: 32px;
+
+  border-radius: 10px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  margin-bottom: 6px;
+
+  font-size: 15px;
+  color: white;
+}
+
+.purple {
+  background: linear-gradient(135deg, #7c3aed, #a855f7);
+}
+
+.green {
+  background: linear-gradient(135deg, #16a34a, #22c55e);
+}
+
+.blue {
+  background: linear-gradient(135deg, #2563eb, #3b82f6);
+}
+
+.orange {
+  background: linear-gradient(135deg, #ea580c, #f97316);
+}
+
+.feature-card h4 {
+  font-size: 10px;
+  font-weight: 700;
+  line-height: 1.2;
+  margin-bottom: 3px;
+}
+
+.feature-card p {
+  font-size: 8px;
+  line-height: 1.3;
+  color: #cbd5e1;
+}
+
+/* =========================
+   Button
+========================= */
+
+.cover-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: #2563eb;
+  color: white;
+  border: none;
+  border-radius: 50px;
+  padding: 12px 28px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.cover-btn:hover {
+  background: #3b82f6;
+  transform: translateY(-2px);
+}
+
+.cover-btn svg {
+  width: 16px;
+  height: 16px;
+}
+
+/* =========================
+   Responsive
+========================= */
+
+@media (max-width: 1200px) {
+  .feature-cards {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .cover-content {
+    max-width: 700px;
+  }
+}
+
+@media (max-width: 768px) {
+  .cover-content {
+    padding: 40px 25px;
+    max-width: 100%;
+  }
+
+  .cover-title {
+    font-size: 2rem;
+  }
+
+  .cover-subtitle {
+    font-size: 0.9rem;
+  }
+
+  .cover-desc {
+    font-size: 0.9rem;
+  }
+
+  .feature-cards {
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+
+  .feature-card {
+    min-height: auto;
+  }
+
+  .cover-btn {
+    width: 100%;
+    justify-content: center;
+  }
+}

@@ -1,0 +1,224 @@
+/* ==========================
+   Notification Dashboard
+========================== */
+
+.notification-container {
+  display: flex;
+  min-height: 100vh;
+  background: linear-gradient(135deg, #f8fafc, #eef2ff);
+  font-family: "Inter", sans-serif;
+}
+
+.notification-content {
+  flex: 1;
+  padding: 30px;
+}
+
+/* ==========================
+   Header Section
+========================== */
+
+.notification-header {
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(12px);
+  padding: 28px;
+  border-radius: 22px;
+  margin-bottom: 25px;
+  border: 1px solid #e2e8f0;
+  box-shadow: 0 12px 30px rgba(15, 23, 42, 0.08);
+}
+
+.notification-header h2 {
+  margin: 0;
+  font-size: 30px;
+  font-weight: 700;
+  color: #0f172a;
+}
+
+.notification-header p {
+  margin-top: 8px;
+  color: #64748b;
+  font-size: 15px;
+}
+
+/* ==========================
+   Notification List
+========================== */
+
+.notification-list {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+/* ==========================
+   Notification Card
+========================== */
+
+.notification-card {
+  position: relative;
+  background: #ffffff;
+  padding: 22px 24px;
+  border-radius: 18px;
+  border: 1px solid #e2e8f0;
+  overflow: hidden;
+  box-shadow: 0 8px 25px rgba(15, 23, 42, 0.06);
+  transition: all 0.3s ease;
+}
+
+.notification-card::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 6px;
+  height: 100%;
+  border-radius: 10px;
+  background: linear-gradient(
+    to bottom,
+    #3b82f6,
+    #2563eb
+  );
+}
+
+.notification-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 18px 35px rgba(15, 23, 42, 0.12);
+}
+
+/* ==========================
+   Notification Title
+========================== */
+
+.notification-card h3 {
+  margin: 0 0 10px;
+  font-size: 18px;
+  font-weight: 700;
+  color: #1e293b;
+}
+
+/* ==========================
+   Notification Text
+========================== */
+
+.notification-card p {
+  margin: 0 0 12px;
+  color: #64748b;
+  font-size: 14px;
+  line-height: 1.7;
+}
+
+/* ==========================
+   Date / Time
+========================== */
+
+.notification-card small {
+  display: inline-block;
+  padding: 6px 12px;
+  border-radius: 20px;
+  background: #eff6ff;
+  color: #2563eb;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+/* ==========================
+   Unread Notification
+========================== */
+
+.notification-card.unread {
+  border: 1px solid #bfdbfe;
+  background: linear-gradient(
+    135deg,
+    #ffffff,
+    #f8fbff
+  );
+}
+
+.notification-card.unread::before {
+  background: linear-gradient(
+    to bottom,
+    #2563eb,
+    #60a5fa
+  );
+}
+
+/* ==========================
+   Important Notification
+========================== */
+
+.notification-card.important::before {
+  background: linear-gradient(
+    to bottom,
+    #ef4444,
+    #f87171
+  );
+}
+
+.notification-card.important small {
+  background: #fef2f2;
+  color: #dc2626;
+}
+
+/* ==========================
+   Success Notification
+========================== */
+
+.notification-card.success::before {
+  background: linear-gradient(
+    to bottom,
+    #10b981,
+    #34d399
+  );
+}
+
+.notification-card.success small {
+  background: #ecfdf5;
+  color: #059669;
+}
+
+/* ==========================
+   Responsive
+========================== */
+
+@media (max-width: 992px) {
+  .notification-content {
+    padding: 18px;
+  }
+
+  .notification-header {
+    padding: 22px;
+  }
+}
+
+@media (max-width: 768px) {
+  .notification-content {
+    padding: 15px;
+  }
+
+  .notification-header h2 {
+    font-size: 24px;
+  }
+
+  .notification-card {
+    padding: 18px;
+  }
+
+  .notification-card h3 {
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 480px) {
+  .notification-header h2 {
+    font-size: 20px;
+  }
+
+  .notification-card h3 {
+    font-size: 15px;
+  }
+
+  .notification-card p {
+    font-size: 13px;
+  }
+}

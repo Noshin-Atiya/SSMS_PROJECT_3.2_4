@@ -1,0 +1,161 @@
+/* ===== Global Page ===== */
+.dashboard-page {
+  min-height: 100vh;
+  padding: 32px;
+  background: linear-gradient(135deg, #f6f8fc, #eef2f7);
+  font-family: "Inter", "Segoe UI", sans-serif;
+  color: #0f172a;
+}
+
+/* ===== Header ===== */
+.dashboard-page h1 {
+  font-size: 28px;
+  font-weight: 800;
+  margin-bottom: 6px;
+  letter-spacing: -0.5px;
+}
+
+.dashboard-page h2 {
+  font-size: 15px;
+  font-weight: 500;
+  color: #64748b;
+  margin-bottom: 28px;
+}
+
+/* ===== Loading / Empty State ===== */
+.dashboard-page > p {
+  text-align: center;
+  font-size: 16px;
+  color: #64748b;
+  margin-top: 120px;
+}
+
+/* ===== Cards Container ===== */
+.cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 22px;
+  margin-bottom: 30px;
+}
+
+/* ===== Individual Card ===== */
+.card {
+  background: rgba(255, 255, 255, 0.9);
+  backdrop-filter: blur(10px);
+  border-radius: 16px;
+  padding: 22px;
+  border: 1px solid rgba(226, 232, 240, 0.7);
+  box-shadow: 0 10px 30px rgba(15, 23, 42, 0.06);
+  transition: all 0.25s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 4px;
+  background: linear-gradient(90deg, #2563eb, #60a5fa);
+}
+
+.card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 18px 40px rgba(15, 23, 42, 0.12);
+}
+
+/* Card Title */
+.card h3 {
+  font-size: 13px;
+  font-weight: 600;
+  color: #64748b;
+  margin-bottom: 10px;
+  text-transform: uppercase;
+  letter-spacing: 0.6px;
+}
+
+/* Card Value */
+.card p {
+  font-size: 34px;
+  font-weight: 800;
+  color: #0f172a;
+}
+
+/* ===== Students Section ===== */
+.students-list {
+  background: rgba(255, 255, 255, 0.95);
+  border-radius: 18px;
+  padding: 24px;
+  border: 1px solid rgba(226, 232, 240, 0.7);
+  box-shadow: 0 10px 30px rgba(15, 23, 42, 0.06);
+}
+
+/* Section Title */
+.students-list h3 {
+  font-size: 16px;
+  font-weight: 700;
+  margin-bottom: 18px;
+  color: #0f172a;
+}
+
+/* ===== Student List ===== */
+.students-list ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+/* Student Item */
+.students-list li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  padding: 14px 16px;
+  border-radius: 12px;
+
+  background: #f8fafc;
+  border: 1px solid #e2e8f0;
+
+  transition: all 0.2s ease;
+  font-size: 14px;
+}
+
+.students-list li:hover {
+  background: #eff6ff;
+  border-color: #93c5fd;
+  transform: translateX(5px);
+}
+
+/* Empty State */
+.students-list p {
+  text-align: center;
+  color: #94a3b8;
+  padding: 20px 0;
+}
+
+/* ===== Responsive ===== */
+@media (max-width: 768px) {
+  .dashboard-page {
+    padding: 18px;
+  }
+
+  .dashboard-page h1 {
+    font-size: 22px;
+  }
+
+  .card p {
+    font-size: 26px;
+  }
+
+  .students-list li {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 4px;
+  }
+}

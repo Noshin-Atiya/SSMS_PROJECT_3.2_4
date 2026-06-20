@@ -1,0 +1,148 @@
+.notices-page {
+  padding: 40px;
+  min-height: 100vh;
+  background: #f1f5f9;
+  font-family: "Inter", sans-serif;
+  color: #0f172a;
+}
+
+/* ===== Page Title (optional if you add h1) ===== */
+.notices-page h1 {
+  font-size: 28px;
+  font-weight: 800;
+  margin-bottom: 20px;
+  letter-spacing: -0.5px;
+}
+
+/* ================= FORM ================= */
+.notice-form {
+  background: #ffffff;
+  padding: 24px;
+  border-radius: 18px;
+
+  border: 1px solid #e2e8f0;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.05);
+
+  margin-bottom: 30px;
+  transition: 0.3s ease;
+}
+
+.notice-form:hover {
+  transform: translateY(-3px);
+}
+
+/* Inputs */
+.notice-form input,
+.notice-form textarea {
+  width: 100%;
+  padding: 12px 14px;
+  margin-bottom: 12px;
+
+  border: 1px solid #e2e8f0;
+  border-radius: 12px;
+
+  font-size: 14px;
+  outline: none;
+  transition: 0.2s;
+  background: #f8fafc;
+}
+
+.notice-form textarea {
+  min-height: 120px;
+  resize: vertical;
+}
+
+.notice-form input:focus,
+.notice-form textarea:focus {
+  border-color: #3b82f6;
+  background: #fff;
+  box-shadow: 0 0 0 4px rgba(59, 130, 246, 0.15);
+}
+
+/* Button */
+.notice-form button {
+  background: linear-gradient(135deg, #2563eb, #1d4ed8);
+  color: #fff;
+
+  padding: 12px 18px;
+  border: none;
+  border-radius: 12px;
+
+  font-weight: 600;
+  cursor: pointer;
+
+  transition: all 0.2s ease;
+}
+
+.notice-form button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 20px rgba(37, 99, 235, 0.25);
+}
+
+/* ================= NOTICE CARD ================= */
+.notice-card {
+  background: #ffffff;
+  border-radius: 16px;
+
+  padding: 18px 20px;
+  margin-bottom: 16px;
+
+  border-left: 5px solid #f59e0b;
+
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
+
+  transition: all 0.25s ease;
+
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.notice-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 18px 35px rgba(0, 0, 0, 0.08);
+}
+
+/* Title */
+.notice-card h3 {
+  font-size: 16px;
+  font-weight: 700;
+  color: #0f172a;
+}
+
+/* Content */
+.notice-card p {
+  font-size: 14px;
+  color: #475569;
+  line-height: 1.5;
+}
+
+/* Meta info (optional date/author) */
+.notice-meta {
+  font-size: 12px;
+  color: #94a3b8;
+  margin-top: 6px;
+}
+
+/* ================= EMPTY STATE ================= */
+.no-notices {
+  text-align: center;
+  padding: 40px;
+  color: #94a3b8;
+  font-size: 15px;
+}
+
+/* ================= RESPONSIVE ================= */
+@media (max-width: 768px) {
+  .notices-page {
+    padding: 20px;
+  }
+
+  .notice-form {
+    padding: 18px;
+  }
+
+  .notice-card {
+    padding: 14px;
+  }
+}

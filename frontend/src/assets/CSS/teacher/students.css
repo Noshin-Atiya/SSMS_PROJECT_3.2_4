@@ -1,0 +1,151 @@
+.students-page {
+  padding: 40px;
+  min-height: 100vh;
+
+  background: linear-gradient(135deg, #f6f8fc, #eef2f7);
+  font-family: "Inter", "Segoe UI", sans-serif;
+
+  color: #0f172a;
+}
+
+/* ===== TITLE ===== */
+.students-page h1 {
+  font-size: 28px;
+  font-weight: 800;
+  letter-spacing: -0.5px;
+
+  margin-bottom: 22px;
+}
+
+/* ===== SEARCH BAR ===== */
+.students-search {
+  width: 100%;
+  padding: 14px 16px;
+  margin-bottom: 22px;
+
+  border-radius: 14px;
+  border: 1px solid #e5e7eb;
+
+  background: #ffffff;
+
+  font-size: 14px;
+
+  transition: all 0.2s ease;
+  box-shadow: 0 6px 16px rgba(0,0,0,0.04);
+}
+
+.students-search:focus {
+  outline: none;
+  border-color: #3b82f6;
+  box-shadow: 0 0 0 4px rgba(59,130,246,0.12);
+}
+
+/* ===== MAIN CARD ===== */
+.students-card {
+  background: rgba(255, 255, 255, 0.9);
+  backdrop-filter: blur(10px);
+
+  padding: 24px;
+  border-radius: 18px;
+
+  border: 1px solid rgba(226, 232, 240, 0.7);
+
+  box-shadow: 0 12px 30px rgba(15, 23, 42, 0.06);
+
+  transition: 0.25s ease;
+}
+
+/* subtle hover effect */
+.students-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 18px 40px rgba(15, 23, 42, 0.1);
+}
+
+/* ===== TABLE ===== */
+.students-card table {
+  width: 100%;
+  border-collapse: collapse;
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+/* HEADER */
+.students-card th {
+  background: linear-gradient(135deg, #f1f5f9, #e2e8f0);
+  padding: 14px;
+   text-align: center;
+  font-size: 13px;
+  font-weight: 700;
+
+  color: #475569;
+  letter-spacing: 0.3px;
+}
+
+/* ROWS */
+.students-card td {
+  padding: 14px;
+  font-size: 14px;
+  color: #0f172a;
+   text-align: center;
+  border-bottom: 1px solid #f1f5f9;
+}
+
+/* HOVER ROW */
+.students-card tr:hover td {
+  background: #f8fafc;
+  transition: 0.2s;
+}
+
+/* STRIPED EFFECT (optional professional touch) */
+.students-card tr:nth-child(even) td {
+  background: #fcfdff;
+}
+
+/* ===== EMPTY STATE ===== */
+.students-card p {
+  text-align: center;
+  padding: 20px;
+  color: #64748b;
+}
+
+/* ===== MOBILE RESPONSIVE ===== */
+@media (max-width: 768px) {
+  .students-page {
+    padding: 18px;
+  }
+
+  .students-card {
+    padding: 16px;
+  }
+
+  .students-card table,
+  .students-card thead,
+  .students-card tbody,
+  .students-card th,
+  .students-card td,
+  .students-card tr {
+    display: block;
+  }
+
+  .students-card tr {
+    margin-bottom: 12px;
+    background: white;
+    border: 1px solid #e5e7eb;
+    border-radius: 12px;
+    padding: 10px;
+  }
+
+  .students-card td {
+    text-align: right;
+    position: relative;
+    padding-left: 50%;
+  }
+
+  .students-card td::before {
+    content: attr(data-label);
+    position: absolute;
+    left: 12px;
+    font-weight: 600;
+    color: #64748b;
+  }
+}
