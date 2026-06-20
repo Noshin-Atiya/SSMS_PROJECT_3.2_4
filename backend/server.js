@@ -536,7 +536,7 @@ app.get("/student/courseStudents/:courseId", async (req, res) => {
     res.send(result);
 
   } catch (err) {
-    res.status(500).send({ error: "Failed" });
+    res.status(500).send({ error: "Failed to fetch classmates" });
   }
 });
 
