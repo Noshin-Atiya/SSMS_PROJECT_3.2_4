@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+ import "../../assets//CSS/admin/students.css"
 
 export default function Students() {
   const [students, setStudents] = useState([]);
